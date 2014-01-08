@@ -14,6 +14,11 @@ alias rgrep='grep -r'
 alias pacman='sudo pacman'
 alias xp='xmms2 prev'
 alias xn='xmms2 next'
+alias nload='nload -u H'
+alias like='xmms2 info >> ~/music/liked'
+alias krdb='gdb /usr/local/bini/krad_radio'
+alias kl='kr ls'
+alias krv='NOTIFY_SOCKET=debug valgrind krad_radio radio2'
 
 PS1='\[\033[34m\][\[\033[32m\]\u\[\033[34m\]@\[\033[31m\]\h\[\033[34m\]::\[\033[37m\]\w\[\033[34m\]]\[\033[0m\]% '
 
