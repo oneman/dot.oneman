@@ -16,7 +16,7 @@ alias xp='xmms2 prev'
 alias xn='xmms2 next'
 alias nload='nload -u H'
 alias like='xmms2 info >> ~/music/liked'
-alias krdb='gdb /usr/local/bini/krad_radio'
+alias krdb='gdb /usr/local/bin/krad_radio'
 alias kl='kr ls'
 alias krv='NOTIFY_SOCKET=debug valgrind krad_radio radio2'
 
