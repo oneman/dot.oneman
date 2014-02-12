@@ -19,6 +19,7 @@ alias like='xmms2 info >> ~/music/liked'
 alias krdb='gdb /usr/local/bin/krad_radio'
 alias kl='kr ls'
 alias krv='NOTIFY_SOCKET=debug valgrind krad_radio radio2'
+alias lc='ls -I*.o -I*.lo -I*.la'
 
 PS1='\[\033[34m\][\[\033[32m\]\u\[\033[34m\]@\[\033[31m\]\h\[\033[34m\]::\[\033[37m\]\w\[\033[34m\]]\[\033[0m\]% '
 
