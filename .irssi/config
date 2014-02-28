@@ -124,14 +124,6 @@ servers = (
     use_ssl = "yes";
     ssl_verify = "yes";
     autoconnect = "yes";
-  },
-  {
-    address = "irc.mozilla.org";
-    chatnet = "moz";
-    port = "8443";
-    use_ssl = "yes";
-    ssl_verify = "yes";
-    autoconnect = "yes";
   }
 );
 chatnets = {
@@ -140,15 +132,7 @@ chatnets = {
     nick = "oneman";
     autosendcmd = "/msg nickserv IDENTIFY XXXXXXXXXXXXXXX";
   };
-  moz = {
-    type = "IRC";
-    nick = "oneman";
-    autosendcmd = "/msg nickserv IDENTIFY XXXXXXXXXXXXXXX";
-  };
 };
 channels = (
-  { name = "#daala"; chatnet = "fn"; autojoin = "yes"; },
-  { name = "#xiph"; chatnet = "fn"; autojoin = "yes"; },
   { name = "#xmms2"; chatnet = "fn"; autojoin = "yes"; },
-  { name = "#kradradio"; chatnet = "moz"; autojoin = "yes"; }
 );
