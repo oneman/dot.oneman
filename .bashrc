@@ -32,3 +32,6 @@ PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 LD_LIBRARY_PATH=/usr/local/lib
 
 export PKG_CONFIG_PATH LD_LIBRARY_PATH
+
+KRAD_TEST_DATA=/home/oneman/kode/test_data
+export KRAD_TEST_DATA
