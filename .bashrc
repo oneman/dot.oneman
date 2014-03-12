@@ -34,4 +34,8 @@ LD_LIBRARY_PATH=/usr/local/lib
 export PKG_CONFIG_PATH LD_LIBRARY_PATH
 
 KRAD_TEST_DATA=/home/oneman/kode/test_data
-export KRAD_TEST_DATA
+KRAD_BUILD_DIR=/home/oneman/kode/krad_radio
+export KRAD_TEST_DATA KRAD_BUILD_DIR
+
+alias kb='cd $KRAD_BUILD_DIR && scripts/codegen.sh && make -j8'
+alias krb='kb && sudo make install && krad_radio radio1'
