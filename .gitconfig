@@ -1,9 +1,9 @@
 [user]
-  email = drichards@mozilla.com
+  email = david@kradradio.com
   name = David Richards
 [push]
   default = simple
 [credential]
   helper = cache --timeout=13600
 [github]
-  user = oneman        
+  user = oneman
