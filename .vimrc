@@ -20,3 +20,6 @@ set undolevels=65536
 "set cc=80
 set shortmess+=I
 color desert
+au BufReadPost *.raml set syntax=yaml
+:nmap <Space> i
+:imap ` <Esc>

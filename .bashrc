@@ -1,41 +1,64 @@
+#
+# ~/.bashrc
+#
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias s='sensors coretemp-isa-0'
+alias ls='ls --color=auto'
+alias htop='nice htop'
+alias weston='weston --width=1920 --height=1080'
+alias bemenu='/usr/local/bin/bemenu-run --fn "M+ 2mn Bold 55"'
+alias pacman='sudo pacman'
+alias nload='nload -u H'
+alias like='xmms2 info >> ~/music/liked'
+alias lc='ls -I*.o -I*.lo -I*.la'
+alias kc='cd ~/kode/krad_radio'
+alias marson='wol c8:60:00:c6:d8:ff'
+alias ydl='youtube-dl -f bestvideo+bestaudio'
+alias wm="/home/oneman/kode/loliwm_old/target/src/loliwm"
+
 alias rgrep='grep -r'
 alias rg='grep -r'
+alias rgrep='grep -r'
+alias cgrep="grep -r --include=*.h --include=*.c"
+
 alias gs='git status'
 alias ga='git add'
 alias gd='git diff'
-alias ls='ls --color=auto'
-alias nano='vim'
-alias htop='nice htop'
-alias weston='weston --width=1600 --height=950'
-alias rgrep='grep -r'
-alias pacman='sudo pacman'
+alias gfa='git fetch --all'
+
 alias xp='xmms2 prev'
 alias xn='xmms2 next'
-alias nload='nload -u H'
-alias like='xmms2 info >> ~/music/liked'
-alias krdb='gdb /usr/local/bin/krad_radio'
-alias kl='kr ls'
-alias krv='NOTIFY_SOCKET=debug valgrind krad_radio radio2'
-alias lc='ls -I*.o -I*.lo -I*.la'
+alias xl='xmms2 list'
+alias xs='xmms2 status'
+alias xi='xmms2 info'
+alias xc='xmms2 current'
 
-PS1='\[\033[34m\][\[\033[32m\]\u\[\033[34m\]@\[\033[31m\]\h\[\033[34m\]::\[\033[37m\]\w\[\033[34m\]]\[\033[0m\]% '
+alias radio2="KRAD_WEB_PORT=4000 krad_radio radio2"
+alias r2="radio2"
+alias radio3="KRAD_WEB_PORT=3000 krad_radio radio3"
+alias r3="radio3"
 
-if test "$USER" == "oneman"; then
-  PS1='\[\033[34m\][\[\033[31m\]\h\[\033[34m\]::\[\033[37m\]\w\[\033[34m\]]\[\033[0m\]% '
-fi
+GDK_BACKEND=wayland
+BEMENU_BACKEND=wayland
+TERMINAL=terminology
+export BEMENU_BACKEND GDK_BACKEND TERMINAL
+
+WLC_DIM=0.7
+WLC_BG=0
+export WLC_BG WLC_DIM
+
+KRAD_WEB_PORT=5000
+KRAD_WEB_ROOT=$HOME/kode/krad_radio/web/rack
+KRAD_XFER_INCOMING=$HOME/uploads
+export KRAD_WEB_PORT KRAD_WEB_ROOT KRAD_XFER_INCOMING
+[[ -f ~/.kradrc ]] && . ~/.kradrc
 
 # roflcoper zone
 PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-LD_LIBRARY_PATH=/usr/local/lib
+LD_LIBRARY_PATH=/usr/local/lib:/home/oneman/kode/loliwm_old/target/src
+export LD_LIBRARY_PATH PKG_CONFIG_PATH
 
-export PKG_CONFIG_PATH LD_LIBRARY_PATH
-
-KRAD_TEST_DATA=/home/oneman/kode/test_data
-KRAD_BUILD_DIR=/home/oneman/kode/krad_radio
-export KRAD_TEST_DATA KRAD_BUILD_DIR
-
-alias kb='cd $KRAD_BUILD_DIR && scripts/codegen.sh && make -j8'
-alias krb='kb && sudo make install && krad_radio radio1'
+PS1='\[\033[34m\][\[\033[37m\]\w\[\033[34m\]]\[\033[0m\]% '
