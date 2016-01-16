@@ -41,7 +41,8 @@ alias r2="radio2"
 alias radio3="KRAD_WEB_PORT=3000 krad_radio radio3"
 alias r3="radio3"
 
-GDK_BACKEND=wayland
+GDK_BACKEND=x11
+#GDK_BACKEND=wayland
 BEMENU_BACKEND=wayland
 TERMINAL=terminology
 export BEMENU_BACKEND GDK_BACKEND TERMINAL
