@@ -2,23 +2,22 @@
 # ~/.bashrc
 #
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+KRAD_WEB_ROOT=/home/demo/src/lush/web/rack
+KRAD_WEB_PORT=2601
+KRAD_XFER_INCOMING=/run/media/demo/55dd0175-c1a0-4723-880e-0de6a5a9cdd4/funstuff
+export KRAD_WEB_ROOT KRAD_WEB_PORT KRAD_XFER_INCOMING
 
+alias m='mpv -fs '
+alias y='yt-dlp '
 alias s='sensors coretemp-isa-0'
-alias ls='ls --color=auto'
-alias htop='nice htop'
-alias bemenu='/usr/local/bin/bemenu-run --fn "M+ 2mn Bold 55"'
-alias pacman='sudo pacman'
-alias nload='nload -u H'
-alias like='xmms2 info >> ~/music/liked'
-alias lc='ls -I*.o -I*.lo -I*.la'
-alias kc='cd ~/kode/krad_radio'
-alias marson='wol c8:60:00:c6:d8:ff'
-alias ydl='youtube-dl -f bestvideo+bestaudio'
-alias wm="/home/oneman/kode/loliwm_old/target/src/loliwm"
 
-alias rgrep='grep -r'
+alias htop='nice htop'
+alias pacman='sudo pacman'
+alias dmesg='sudo dmesg'
+alias nload='nload -u H'
+
+alias grep='grep -i'
+alias g='grep -i'
 alias rg='grep -r'
 alias rgrep='grep -r'
 alias cgrep="grep -r --include=*.h --include=*.c"
@@ -35,30 +34,14 @@ alias xs='xmms2 status'
 alias xi='xmms2 info'
 alias xc='xmms2 current'
 
-alias radio2="KRAD_WEB_PORT=4000 krad_radio radio2"
-alias r2="radio2"
-alias radio3="KRAD_WEB_PORT=3000 krad_radio radio3"
-alias r3="radio3"
-
-GDK_BACKEND=x11
-#GDK_BACKEND=wayland
-BEMENU_BACKEND=wayland
-TERMINAL=terminology
-export BEMENU_BACKEND GDK_BACKEND TERMINAL
-
-WLC_DIM=0.7
-WLC_BG=0
-export WLC_BG WLC_DIM
-
-KRAD_WEB_PORT=5000
-KRAD_WEB_ROOT=$HOME/kode/krad_radio/web/rack
-KRAD_XFER_INCOMING=$HOME/uploads
-export KRAD_WEB_PORT KRAD_WEB_ROOT KRAD_XFER_INCOMING
-[[ -f ~/.kradrc ]] && . ~/.kradrc
-
-# roflcoper zone
-PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-LD_LIBRARY_PATH=/usr/local/lib:/home/oneman/kode/loliwm_old/target/src
-export LD_LIBRARY_PATH PKG_CONFIG_PATH
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias lh='ls -lh'
+alias l1='ls -1'
+alias lc='ls -I*.o -I*.lo -I*.la'
+alias c='ls -I*.o -I*.lo -I*.la'
+alias cl='ls -1 -I*.o -I*.lo -I*.la'
+alias c1='ls -1 -I*.o -I*.lo -I*.la'
 
 PS1='\[\033[34m\][\[\033[37m\]\w\[\033[34m\]]\[\033[0m\]% '
+PATH=/usr/bin:/home/demo/.cargo/bin
